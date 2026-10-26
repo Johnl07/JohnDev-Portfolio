@@ -96,7 +96,7 @@ function initMobileMenu() {
  */
 function initWorksFilter() {
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const workCards = document.querySelectorAll('.work-card');
+  const workCards = document.querySelectorAll('.catalogue-item-entry, .work-card');
 
   if (!filterButtons.length || !workCards.length) return;
 
