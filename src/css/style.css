@@ -85,11 +85,91 @@
   --btn-primary-text: #FFFFFF;
 }
 
-/* Base Resets */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ==========================================================================
+   Gundam / Mecha Decals & Tactical Chassis Elements
+   ========================================================================== */
+.mecha-cut {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.mecha-cut-btn {
+  clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 0 100%);
+  position: relative;
+}
+
+.mecha-cut-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-light);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.hazard-strip {
+  height: 4px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-secondary),
+    var(--color-secondary) 6px,
+    var(--color-primary) 6px,
+    var(--color-primary) 12px
+  );
+  opacity: 0.85;
+}
+
+[data-theme="dark"] .hazard-strip {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-secondary),
+    var(--color-secondary) 6px,
+    var(--color-accent) 6px,
+    var(--color-accent) 12px
+  );
+}
+
+.mecha-serial-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: var(--color-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+[data-theme="dark"] .mecha-serial-tag {
+  color: var(--color-light);
+}
+
+.hud-crosshair {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  display: inline-block;
+  line-height: 1;
+}
+
+.chassis-tag-pill {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  padding: 1px 5px;
+  border-radius: var(--radius-xs);
+}
+
+[data-theme="dark"] .chassis-tag-pill {
+  background-color: var(--color-secondary);
 }
 
 html {
