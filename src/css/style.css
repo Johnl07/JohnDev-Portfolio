@@ -470,7 +470,7 @@ a:hover {
   background-color: var(--bg-surface-alt);
   border-bottom: 1px solid var(--border-light);
   overflow: hidden;
-  height: 180px;
+  height: 195px;
   cursor: pointer;
 }
 
@@ -503,12 +503,12 @@ a:hover {
 }
 
 .work-preview-viewport {
-  height: calc(180px - 28px);
+  height: calc(195px - 28px);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F7F3FA;
+  background-color: #F6F1FA;
   overflow: hidden;
 }
 
@@ -516,11 +516,12 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   transition: transform 0.3s ease;
 }
 
 .work-card:hover .work-preview-viewport img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 /* Styled Mockup UI for activities without static images */
