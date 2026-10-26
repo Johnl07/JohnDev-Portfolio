@@ -1,14 +1,16 @@
 /**
- * Portfolio Interaction Logic
- * Lightweight, dependency-free vanilla JavaScript.
+ * John Dev Portfolio - Main Logic
+ * Lightweight, accessible, zero external dependencies.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
+  initScrollProgress();
   initMobileMenu();
   initWorksFilter();
   initActiveNav();
   initPreviewModal();
+  initCopyEmail();
   initContactForm();
   initCurrentYear();
 });
@@ -54,6 +56,20 @@ function initTheme() {
 }
 
 /**
+ * Reading Scroll Progress Bar
+ */
+function initScrollProgress() {
+  const progressBar = document.querySelector('.scroll-progress-bar');
+  if (!progressBar) return;
+
+  window.addEventListener('scroll', () => {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+    progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+  }, { passive: true });
+}
+
+/**
  * Mobile Navigation Toggle
  */
 function initMobileMenu() {
@@ -67,7 +83,6 @@ function initMobileMenu() {
     toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 
-  // Close menu when a link is clicked
   navMenu.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('open');
@@ -77,7 +92,7 @@ function initMobileMenu() {
 }
 
 /**
- * Filter Works/Activities by category
+ * Filter Works/Activities by category with count update
  */
 function initWorksFilter() {
   const filterButtons = document.querySelectorAll('.filter-btn');
@@ -114,7 +129,7 @@ function initActiveNav() {
   if (!sections.length || !navLinks.length) return;
 
   window.addEventListener('scroll', () => {
-    const scrollPos = window.scrollY + 120;
+    const scrollPos = window.scrollY + 140;
 
     sections.forEach(section => {
       const top = section.offsetTop;
@@ -131,7 +146,7 @@ function initActiveNav() {
         });
       }
     });
-  });
+  }, { passive: true });
 }
 
 /**
@@ -161,14 +176,11 @@ function initPreviewModal() {
   function closePreview() {
     modal.classList.remove('active');
     document.body.classList.remove('modal-open');
-    // Clear iframe to stop processes and reset memory
     iframe.src = 'about:blank';
   }
 
-  // Bind to cards with preview data
   document.querySelectorAll('[data-preview-url]').forEach(elem => {
     elem.addEventListener('click', (e) => {
-      // If clicking directly on an anchor link (e.g. Open Activity), let it perform default action
       if (e.target.closest('a') && !e.target.closest('.preview-trigger-btn')) {
         return;
       }
@@ -180,7 +192,6 @@ function initPreviewModal() {
     });
   });
 
-  // Close triggers
   if (closeBtn) {
     closeBtn.addEventListener('click', closePreview);
   }
@@ -199,6 +210,31 @@ function initPreviewModal() {
 }
 
 /**
+ * 1-Click Copy Email to Clipboard
+ */
+function initCopyEmail() {
+  const copyBtn = document.getElementById('copy-email-btn');
+  if (!copyBtn) return;
+
+  copyBtn.addEventListener('click', () => {
+    const email = 'maulajohnlawrence07@gmail.com';
+    navigator.clipboard.writeText(email).then(() => {
+      const originalText = copyBtn.innerHTML;
+      copyBtn.innerHTML = '&#10003; Copied!';
+      copyBtn.style.color = '#2E7D32';
+
+      setTimeout(() => {
+        copyBtn.innerHTML = originalText;
+        copyBtn.style.color = '';
+      }, 2500);
+    }).catch(() => {
+      // Fallback
+      window.location.href = `mailto:${email}`;
+    });
+  });
+}
+
+/**
  * Accessible Contact Form Simulation / Handler
  */
 function initContactForm() {
@@ -210,14 +246,13 @@ function initContactForm() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Check validity
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
 
     const nameInput = document.getElementById('name');
-    const senderName = nameInput ? nameInput.value : 'there';
+    const senderName = nameInput ? nameInput.value.trim() : 'there';
 
     statusMsg.textContent = `Thank you, ${senderName}! Your message has been prepared. If integrated with a live backend (such as Formspree in .env.example), it will be delivered directly.`;
     statusMsg.className = 'form-status success';

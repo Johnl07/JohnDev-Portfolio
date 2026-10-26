@@ -9,11 +9,16 @@
 </head>
 <body>
 
+  <!-- Top Scroll Reading Progress -->
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+
   <!-- Header Navigation -->
   <header class="site-header">
     <div class="container nav-wrapper">
       <a href="#hero" class="brand-logo" aria-label="Home">
-        John Dev <span class="brand-badge">PORTFOLIO</span>
+        <span class="brand-icon" aria-hidden="true">&lt;/&gt;</span>
+        <span>John Dev</span>
+        <span class="brand-badge">PORTFOLIO</span>
       </a>
 
       <nav aria-label="Main Navigation">
@@ -65,14 +70,30 @@
     <section id="hero" class="hero-section">
       <div class="container hero-grid">
         <div class="hero-content">
-          <p class="hero-tagline">Academic Portfolio &bull; Web Development</p>
+          <p class="hero-eyebrow">Academic Portfolio &bull; Web Development</p>
           <h1 class="hero-title">John Lawrence F. Maula</h1>
-          <p class="hero-subtitle">BS Information Technology &bull; 3rd Year</p>
+          <p class="hero-subtitle">BS Information Technology &bull; 3rd Year Student</p>
+
+          <div class="hero-meta-chips">
+            <span class="meta-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Marilao, Bulacan
+            </span>
+            <span class="meta-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              PDM BSIT
+            </span>
+            <span class="meta-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              Frontend Engineering
+            </span>
+          </div>
+
           <p class="hero-description">
             Building clean, semantic, and responsive web solutions. Focused on mastering core web fundamentals, modular layouts, and purposeful front-end engineering.
           </p>
           <div class="hero-actions">
-            <a href="#works" class="btn btn-primary">View Lab Activities & Works &darr;</a>
+            <a href="#works" class="btn btn-primary">View Lab Activities &darr;</a>
             <a href="#contact" class="btn btn-outline">Get in Touch &rarr;</a>
           </div>
         </div>
@@ -82,24 +103,45 @@
             <img src="public/images/profile.jpeg" alt="Portrait of John Lawrence F. Maula" onerror="this.onerror=null; this.src='public/images/profile.jpg';">
             <div class="avatar-placeholder" style="display: none;">JM</div>
           </div>
+          <div class="avatar-badge-chip">
+            <span style="color: var(--color-secondary);">&#9679;</span>
+            <span>PDM IT Student</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Quick Info Strip -->
-    <section class="quick-info-strip" aria-label="Quick Overview">
+    <!-- Quick Stats Strip -->
+    <section class="quick-info-strip" aria-label="Quick Highlights">
       <div class="container info-grid">
         <div class="info-item">
-          <span class="info-label">Degree & Major</span>
-          <span class="info-value">BS Information Technology</span>
+          <div class="info-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <div class="info-details">
+            <span class="info-label">Curated Activities</span>
+            <span class="info-value">8 Completed Lab Modules</span>
+          </div>
         </div>
+
         <div class="info-item">
-          <span class="info-label">Institution</span>
-          <span class="info-value">Pambayang Dalubhasaan ng Marilao</span>
+          <div class="info-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+          </div>
+          <div class="info-details">
+            <span class="info-label">Academic Program</span>
+            <span class="info-value">Pambayang Dalubhasaan ng Marilao</span>
+          </div>
         </div>
+
         <div class="info-item">
-          <span class="info-label">Primary Concentration</span>
-          <span class="info-value">Web Systems & Frontend Engineering</span>
+          <div class="info-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+          <div class="info-details">
+            <span class="info-label">Core Philosophy</span>
+            <span class="info-value">Semantic HTML, Modern CSS & ES6</span>
+          </div>
         </div>
       </div>
     </section>
@@ -108,18 +150,29 @@
     <section id="works" class="section">
       <div class="container">
         <div class="section-header">
-          <p class="section-eyebrow">Laboratory & Coursework Showcase</p>
-          <h2 class="section-title">Selected Coursework & Activities</h2>
+          <p class="section-eyebrow">Coursework & Lab Progression</p>
+          <h2 class="section-title">Selected Laboratory Activities</h2>
           <p class="section-lead">
             Interactive overview and live access to laboratory outputs demonstrating progression across Midterm and Finals requirements.
           </p>
         </div>
 
-        <!-- Filter Controls (Only Lab Activities) -->
-        <div class="filter-bar" role="tablist" aria-label="Filter works by term">
-          <button class="filter-btn active" data-filter="all">All Works</button>
-          <button class="filter-btn" data-filter="finals">Finals Activities</button>
-          <button class="filter-btn" data-filter="midterms">Midterms Activities</button>
+        <!-- Filter Controls with Count Badges -->
+        <div class="works-toolbar">
+          <div class="filter-bar" role="tablist" aria-label="Filter works by term">
+            <button class="filter-btn active" data-filter="all">
+              <span>All Works</span>
+              <span class="filter-count-badge">8</span>
+            </button>
+            <button class="filter-btn" data-filter="finals">
+              <span>Finals Activities</span>
+              <span class="filter-count-badge">4</span>
+            </button>
+            <button class="filter-btn" data-filter="midterms">
+              <span>Midterms Activities</span>
+              <span class="filter-count-badge">4</span>
+            </button>
+          </div>
         </div>
 
         <!-- Works Grid with Real Activity Overview Screenshots -->
@@ -136,7 +189,7 @@
                 <span class="preview-dot dot-1"></span>
                 <span class="preview-dot dot-2"></span>
                 <span class="preview-dot dot-3"></span>
-                <span class="preview-bar-title">Finals_Act1/index.html</span>
+                <span class="preview-address-bar">pdm://finals/act1.html</span>
               </div>
               <div class="work-preview-viewport">
                 <img src="public/images/previews/finals-act1.png" alt="Finals Act 1 Overview">
@@ -148,7 +201,10 @@
 
             <div class="work-body">
               <div>
-                <span class="work-category-badge">Finals Act 1</span>
+                <div class="work-header-meta">
+                  <span class="work-category-badge">Finals Act 1</span>
+                  <span class="work-index-tag">FIN-01</span>
+                </div>
                 <h3 class="work-title">Personal Portfolio System</h3>
                 <p class="work-summary">
                   Multi-section student portfolio interface featuring structured personal information cards, navigation links, and customized styling.
@@ -180,7 +236,7 @@
                 <span class="preview-dot dot-1"></span>
                 <span class="preview-dot dot-2"></span>
                 <span class="preview-dot dot-3"></span>
-                <span class="preview-bar-title">Finals_Act2/index.html</span>
+                <span class="preview-address-bar">pdm://finals/act2.html</span>
               </div>
               <div class="work-preview-viewport">
                 <img src="public/images/previews/finals-act2.png" alt="Finals Act 2 Overview">
@@ -192,7 +248,10 @@
 
             <div class="work-body">
               <div>
-                <span class="work-category-badge">Finals Act 2</span>
+                <div class="work-header-meta">
+                  <span class="work-category-badge">Finals Act 2</span>
+                  <span class="work-index-tag">FIN-02</span>
+                </div>
                 <h3 class="work-title">Interactive JavaScript Demo</h3>
                 <p class="work-summary">
                   Event-driven JavaScript application demonstrating dynamic state transitions, responsive button triggers, and live text manipulations.
@@ -224,7 +283,7 @@
                 <span class="preview-dot dot-1"></span>
                 <span class="preview-dot dot-2"></span>
                 <span class="preview-dot dot-3"></span>
-                <span class="preview-bar-title">Finals_Act3/index.html</span>
+                <span class="preview-address-bar">pdm://finals/act3.html</span>
               </div>
               <div class="work-preview-viewport">
                 <img src="public/images/previews/finals-act3.png" alt="Finals Act 3 Overview">
@@ -236,7 +295,10 @@
 
             <div class="work-body">
               <div>
-                <span class="work-category-badge">Finals Act 3</span>
+                <div class="work-header-meta">
+                  <span class="work-category-badge">Finals Act 3</span>
+                  <span class="work-index-tag">FIN-03</span>
+                </div>
                 <h3 class="work-title">Dynamic Data Computation</h3>
                 <p class="work-summary">
                   Data manipulation module with dynamic selection elements, computational logic, and calculated result visualization.
@@ -268,7 +330,7 @@
                 <span class="preview-dot dot-1"></span>
                 <span class="preview-dot dot-2"></span>
                 <span class="preview-dot dot-3"></span>
-                <span class="preview-bar-title">Finals_Act4/index.html</span>
+                <span class="preview-address-bar">pdm://finals/act4.html</span>
               </div>
               <div class="work-preview-viewport">
                 <img src="public/images/previews/finals-act4.png" alt="Finals Act 4 Overview">
@@ -280,7 +342,10 @@
 
             <div class="work-body">
               <div>
-                <span class="work-category-badge">Finals Act 4</span>
+                <div class="work-header-meta">
+                  <span class="work-category-badge">Finals Act 4</span>
+                  <span class="work-index-tag">FIN-04</span>
+                </div>
                 <h3 class="work-title">Student Information Loader</h3>
                 <p class="work-summary">
                   Data retrieval exercise connecting client buttons with background text datasets to asynchronously render student records.
@@ -312,7 +377,7 @@
                 <span class="preview-dot dot-1"></span>
                 <span class="preview-dot dot-2"></span>
                 <span class="preview-dot dot-3"></span>
-                <span class="preview-bar-title">Midterm_Act2/index.html</span>
+                <span class="preview-address-bar">pdm://midterm/act2.html</span>
               </div>
               <div class="work-preview-viewport">
                 <img src="public/images/previews/midterm-act2.png" alt="Midterm Act 2 Overview">
@@ -324,7 +389,10 @@
 
             <div class="work-body">
               <div>
-                <span class="work-category-badge">Midterms Act 2</span>
+                <div class="work-header-meta">
+                  <span class="work-category-badge">Midterms Act 2</span>
+                  <span class="work-index-tag">MID-02</span>
+                </div>
                 <h3 class="work-title">Academic Journal & Profile Hub</h3>
                 <p class="work-summary">
                   Comprehensive multi-page academic site covering journal entries, personal profile tables, and university institutional identity.
@@ -356,7 +424,7 @@
                 <span class="preview-dot dot-1"></span>
                 <span class="preview-dot dot-2"></span>
                 <span class="preview-dot dot-3"></span>
-                <span class="preview-bar-title">Midterm_Act3/Home.html</span>
+                <span class="preview-address-bar">pdm://midterm/act3.html</span>
               </div>
               <div class="work-preview-viewport">
                 <img src="public/images/previews/midterm-act3.png" alt="Midterm Act 3 Overview">
@@ -368,7 +436,10 @@
 
             <div class="work-body">
               <div>
-                <span class="work-category-badge">Midterms Act 3</span>
+                <div class="work-header-meta">
+                  <span class="work-category-badge">Midterms Act 3</span>
+                  <span class="work-index-tag">MID-03</span>
+                </div>
                 <h3 class="work-title">Multi-Page Student Web Portal</h3>
                 <p class="work-summary">
                   Integrated student web portal combining interactive navigation, registration forms, profile overviews, and structured data modules.
@@ -400,7 +471,7 @@
                 <span class="preview-dot dot-1"></span>
                 <span class="preview-dot dot-2"></span>
                 <span class="preview-dot dot-3"></span>
-                <span class="preview-bar-title">Midterm_Act4/Index.html</span>
+                <span class="preview-address-bar">pdm://midterm/act4.html</span>
               </div>
               <div class="work-preview-viewport">
                 <img src="public/images/previews/midterm-act4.png" alt="Midterm Act 4 Overview">
@@ -412,7 +483,10 @@
 
             <div class="work-body">
               <div>
-                <span class="work-category-badge">Midterms Act 4</span>
+                <div class="work-header-meta">
+                  <span class="work-category-badge">Midterms Act 4</span>
+                  <span class="work-index-tag">MID-04</span>
+                </div>
                 <h3 class="work-title">Interactive Student Portal Layout</h3>
                 <p class="work-summary">
                   Refined personal portal layout featuring CSS stylesheets, sidebar announcement components, and structured portal sections.
@@ -444,7 +518,7 @@
                 <span class="preview-dot dot-1"></span>
                 <span class="preview-dot dot-2"></span>
                 <span class="preview-dot dot-3"></span>
-                <span class="preview-bar-title">Midterm_Act5/Gallery.html</span>
+                <span class="preview-address-bar">pdm://midterm/act5.html</span>
               </div>
               <div class="work-preview-viewport">
                 <img src="public/images/previews/midterm-act5.png" alt="Midterm Act 5 Overview">
@@ -456,7 +530,10 @@
 
             <div class="work-body">
               <div>
-                <span class="work-category-badge">Midterms Act 5</span>
+                <div class="work-header-meta">
+                  <span class="work-category-badge">Midterms Act 5</span>
+                  <span class="work-index-tag">MID-05</span>
+                </div>
                 <h3 class="work-title">Media Showcase Gallery</h3>
                 <p class="work-summary">
                   Rich multimedia gallery application built with responsive CSS grid cards, model kit collections, and image asset presentations.
@@ -492,38 +569,91 @@
           </p>
         </div>
 
-        <div class="skills-grid">
-          <div class="skill-category-card">
-            <h3 class="skill-category-title">Core Web Development</h3>
-            <ul class="skill-pill-list">
-              <li class="skill-pill">HTML5 (Semantic & Accessible)</li>
-              <li class="skill-pill">CSS3 (Flexbox & Grid)</li>
-              <li class="skill-pill">JavaScript (ES6+)</li>
-              <li class="skill-pill">DOM Manipulation & Events</li>
-              <li class="skill-pill">Responsive Design</li>
-            </ul>
+        <div class="skills-layout-grid">
+          <div class="skills-cards-column">
+            <!-- Card 1: Core Frontend -->
+            <div class="skill-category-card">
+              <h3 class="skill-category-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <span>Core Web Development</span>
+              </h3>
+              <ul class="skill-pill-list">
+                <li class="skill-pill">HTML5 (Semantic & Accessible)</li>
+                <li class="skill-pill">CSS3 (Flexbox & CSS Grid)</li>
+                <li class="skill-pill">JavaScript (ES6+ Standards)</li>
+                <li class="skill-pill">DOM Events & State Management</li>
+                <li class="skill-pill">Responsive Design & Media Queries</li>
+              </ul>
+            </div>
+
+            <!-- Card 2: Database & Systems -->
+            <div class="skill-category-card">
+              <h3 class="skill-category-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                <span>Database & Systems</span>
+              </h3>
+              <ul class="skill-pill-list">
+                <li class="skill-pill">SQL Relational Queries</li>
+                <li class="skill-pill">Database Schema Design</li>
+                <li class="skill-pill">Data Modeling</li>
+                <li class="skill-pill">CRUD Operations</li>
+                <li class="skill-pill">Client-Side Storage (LocalStorage)</li>
+              </ul>
+            </div>
+
+            <!-- Card 3: Workflow & Tools -->
+            <div class="skill-category-card">
+              <h3 class="skill-category-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                <span>Workflow & Engineering Tools</span>
+              </h3>
+              <ul class="skill-pill-list">
+                <li class="skill-pill">Git Version Control</li>
+                <li class="skill-pill">GitHub Repository Workflow</li>
+                <li class="skill-pill">VS Code Productivity</li>
+                <li class="skill-pill">Browser DevTools Debugging</li>
+                <li class="skill-pill">Command Line & Shell</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="skill-category-card">
-            <h3 class="skill-category-title">Database & Systems</h3>
-            <ul class="skill-pill-list">
-              <li class="skill-pill">SQL Fundamentals</li>
-              <li class="skill-pill">Relational Database Design</li>
-              <li class="skill-pill">Data Modeling</li>
-              <li class="skill-pill">CRUD Operations</li>
+          <!-- Development Principles Aside -->
+          <aside class="principles-card">
+            <h3 class="principles-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Development Philosophy</span>
+            </h3>
+            <ul class="principles-list">
+              <li class="principle-item">
+                <span class="principle-check">&#10003;</span>
+                <div class="principle-text">
+                  <strong>Semantic Foundation</strong>
+                  <p>Clean HTML structure ensures accessibility, SEO, and maintainable document trees.</p>
+                </div>
+              </li>
+              <li class="principle-item">
+                <span class="principle-check">&#10003;</span>
+                <div class="principle-text">
+                  <strong>Zero-Bloat Vanilla First</strong>
+                  <p>Understanding native browser APIs before introducing heavy frameworks.</p>
+                </div>
+              </li>
+              <li class="principle-item">
+                <span class="principle-check">&#10003;</span>
+                <div class="principle-text">
+                  <strong>Responsive by Default</strong>
+                  <p>Fluid layouts engineered to look sharp across mobile, tablet, and widescreen displays.</p>
+                </div>
+              </li>
+              <li class="principle-item">
+                <span class="principle-check">&#10003;</span>
+                <div class="principle-text">
+                  <strong>Version-Controlled</strong>
+                  <p>Atomic, conventional commits that preserve clear historical checkpoints.</p>
+                </div>
+              </li>
             </ul>
-          </div>
-
-          <div class="skill-category-card">
-            <h3 class="skill-category-title">Tools & Development Workflow</h3>
-            <ul class="skill-pill-list">
-              <li class="skill-pill">Git & Version Control</li>
-              <li class="skill-pill">GitHub</li>
-              <li class="skill-pill">VS Code</li>
-              <li class="skill-pill">Chrome DevTools</li>
-              <li class="skill-pill">Command Line</li>
-            </ul>
-          </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -547,6 +677,17 @@
             <p>
               I believe in learning the core fundamentals first—HTML, CSS, and JavaScript—to build strong technical foundations before reaching for complex frameworks.
             </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <strong>University</strong>
+                <span>Pambayang Dalubhasaan ng Marilao</span>
+              </div>
+              <div class="highlight-box">
+                <strong>Year & Program</strong>
+                <span>3rd Year &bull; BSIT</span>
+              </div>
+            </div>
           </div>
 
           <div class="timeline">
@@ -581,27 +722,43 @@
 
         <div class="contact-grid">
           <div class="contact-info">
-            <h3>Contact Information</h3>
-            <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.95rem;">
+            <h3 style="font-size: 1.15rem; color: var(--text-heading); font-weight: 700;">Direct Inquiries</h3>
+            <p style="color: var(--text-muted); margin-top: 0.4rem; font-size: 0.95rem;">
               You can reach me directly via email or check out my repository code on GitHub.
             </p>
 
             <div class="contact-info-list">
-              <div class="contact-info-item">
-                <span class="contact-info-label">Email</span>
-                <a href="mailto:maulajohnlawrence07@gmail.com" class="contact-info-value">maulajohnlawrence07@gmail.com</a>
+              <!-- Contact Card 1: Email with 1-Click Copy -->
+              <div class="contact-card">
+                <div class="contact-card-content">
+                  <span class="contact-info-label">Direct Email</span>
+                  <a href="mailto:maulajohnlawrence07@gmail.com" class="contact-info-value">maulajohnlawrence07@gmail.com</a>
+                </div>
+                <button type="button" id="copy-email-btn" class="copy-email-btn" aria-label="Copy email address">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
               </div>
-              <div class="contact-info-item">
-                <span class="contact-info-label">Location</span>
-                <span class="contact-info-value">Marilao, Bulacan, Philippines</span>
+
+              <!-- Contact Card 2: Campus / Location -->
+              <div class="contact-card">
+                <div class="contact-card-content">
+                  <span class="contact-info-label">Location</span>
+                  <span class="contact-info-value">Marilao, Bulacan, Philippines</span>
+                </div>
               </div>
-              <div class="contact-info-item">
-                <span class="contact-info-label">GitHub</span>
-                <a href="https://github.com" target="_blank" rel="noopener" class="contact-info-value">github.com/your-username</a>
+
+              <!-- Contact Card 3: GitHub -->
+              <div class="contact-card">
+                <div class="contact-card-content">
+                  <span class="contact-info-label">GitHub Repository</span>
+                  <a href="https://github.com" target="_blank" rel="noopener" class="contact-info-value">github.com/your-username</a>
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Contact Form -->
           <div class="contact-form-wrapper">
             <form id="contact-form" class="contact-form" novalidate>
               <div class="form-group">
@@ -619,7 +776,10 @@
                 <textarea id="message" name="message" class="form-control" rows="4" placeholder="How can I help you?" required></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Send Message</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
               <div id="form-status" class="form-status" role="alert"></div>
             </form>
           </div>
@@ -637,7 +797,7 @@
           <span id="modal-title" class="preview-modal-title">Live Preview</span>
         </div>
         <div class="preview-modal-controls">
-          <a id="modal-external-btn" href="#" target="_blank" rel="noopener" class="btn btn-sm btn-secondary" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+          <a id="modal-external-btn" href="#" target="_blank" rel="noopener" class="btn btn-sm btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.75rem;">
             Open Activity In New Tab &nearr;
           </a>
           <button id="modal-close-btn" class="modal-close-btn" aria-label="Close Preview Modal">&times;</button>
@@ -652,10 +812,13 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-wrapper">
-      <p>&copy; <span id="current-year">2026</span> John Dev Portfolio &bull; John Lawrence F. Maula. All rights reserved.</p>
+      <div class="footer-brand">
+        <span class="brand-icon" style="width: 26px; height: 26px; font-size: 0.75rem;" aria-hidden="true">&lt;/&gt;</span>
+        <p>&copy; <span id="current-year">2026</span> John Dev Portfolio &bull; John Lawrence F. Maula.</p>
+      </div>
 
       <div class="footer-links">
-        <a href="#hero">Top &uarr;</a>
+        <a href="#hero" class="back-to-top">Top &uarr;</a>
         <a href="#works">Works</a>
         <a href="#skills">Skills</a>
         <a href="#about">About</a>
