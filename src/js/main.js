@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   initMobileMenu();
   initWorksFilter();
   initActiveNav();
@@ -11,6 +12,46 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initCurrentYear();
 });
+
+/**
+ * Theme Toggle (Light & Dark with custom purple/lavender theme)
+ */
+function initTheme() {
+  const toggleBtn = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+
+  // Retrieve saved theme or system preference
+  const savedTheme = localStorage.getItem('portfolio-theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+  applyTheme(initialTheme);
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+      localStorage.setItem('portfolio-theme', newTheme);
+    });
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+      if (toggleBtn) {
+        toggleBtn.setAttribute('aria-label', 'Switch to light theme');
+        toggleBtn.setAttribute('title', 'Switch to light theme');
+      }
+    } else {
+      root.removeAttribute('data-theme');
+      if (toggleBtn) {
+        toggleBtn.setAttribute('aria-label', 'Switch to dark theme');
+        toggleBtn.setAttribute('title', 'Switch to dark theme');
+      }
+    }
+  }
+}
 
 /**
  * Mobile Navigation Toggle
