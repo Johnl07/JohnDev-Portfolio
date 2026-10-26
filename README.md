@@ -20,7 +20,7 @@ This project serves as a clean portfolio template to showcase coursework, lab ac
 
 1. **Clone or Download the Repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Johnl07/JohnDev-Portfolio.git
    cd "My Portfolio"
    ```
 
