@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initWorksFilter();
   initActiveNav();
+  initPreviewModal();
   initContactForm();
   initCurrentYear();
 });
@@ -35,7 +36,7 @@ function initMobileMenu() {
 }
 
 /**
- * Filter Works/Projects by category
+ * Filter Works/Activities by category
  */
 function initWorksFilter() {
   const filterButtons = document.querySelectorAll('.filter-btn');
@@ -89,6 +90,70 @@ function initActiveNav() {
         });
       }
     });
+  });
+}
+
+/**
+ * In-Portfolio Live Preview Modal
+ */
+function initPreviewModal() {
+  const modal = document.getElementById('preview-modal');
+  const iframe = document.getElementById('preview-iframe');
+  const modalTitle = document.getElementById('modal-title');
+  const modalBadge = document.getElementById('modal-badge');
+  const modalExternalBtn = document.getElementById('modal-external-btn');
+  const closeBtn = document.getElementById('modal-close-btn');
+
+  if (!modal || !iframe) return;
+
+  function openPreview(url, title, badge) {
+    if (!url) return;
+    iframe.src = url;
+    if (modalTitle) modalTitle.textContent = title || 'Activity Preview';
+    if (modalBadge) modalBadge.textContent = badge || 'LAB PREVIEW';
+    if (modalExternalBtn) modalExternalBtn.href = url;
+
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+  }
+
+  function closePreview() {
+    modal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+    // Clear iframe to stop processes and reset memory
+    iframe.src = 'about:blank';
+  }
+
+  // Bind to cards with preview data
+  document.querySelectorAll('[data-preview-url]').forEach(elem => {
+    elem.addEventListener('click', (e) => {
+      // If clicking directly on an anchor link (e.g. Open Activity), let it perform default action
+      if (e.target.closest('a') && !e.target.closest('.preview-trigger-btn')) {
+        return;
+      }
+      e.preventDefault();
+      const url = elem.getAttribute('data-preview-url');
+      const title = elem.getAttribute('data-preview-title');
+      const badge = elem.getAttribute('data-preview-badge');
+      openPreview(url, title, badge);
+    });
+  });
+
+  // Close triggers
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closePreview);
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closePreview();
+    }
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closePreview();
+    }
   });
 }
 
