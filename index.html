@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of John Lawrence F. Maula - BS Information Technology student & web developer showcasing laboratory activities, technical competencies, and web projects.">
+  <title>John Lawrence F. Maula | Web Portfolio</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="brand-logo" aria-label="Home">
+        JLM <span class="brand-badge">PORTFOLIO</span>
+      </a>
+
+      <div class="status-badge" aria-label="Current Status">
+        <span class="status-indicator"></span>
+        <span>Available for Projects & Internship</span>
+      </div>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#works" class="nav-link">Works</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="hero-tagline">Academic Portfolio & Web Development</p>
+          <h1 class="hero-title">John Lawrence F. Maula</h1>
+          <p class="hero-subtitle">BS Information Technology &bull; 3rd Year</p>
+          <p class="hero-description">
+            Building clean, semantic, and responsive web solutions. Focused on mastering core web fundamentals, modular layouts, and purposeful front-end engineering.
+          </p>
+          <div class="hero-actions">
+            <a href="#works" class="btn btn-primary">View Lab Activities & Works &darr;</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch &rarr;</a>
+          </div>
+        </div>
+
+        <div class="hero-avatar-wrapper">
+          <div class="hero-avatar-frame">
+            <img src="public/images/profile.jpg" alt="Portrait of John Lawrence F. Maula" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="avatar-placeholder" style="display: none;">JM</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Info Strip -->
+    <section class="quick-info-strip" aria-label="Quick Overview">
+      <div class="container info-grid">
+        <div class="info-item">
+          <span class="info-label">Degree & Major</span>
+          <span class="info-value">BS Information Technology</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Institution</span>
+          <span class="info-value">Pamantasan ng Lungsod ng Marikina</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Primary Concentration</span>
+          <span class="info-value">Web Systems & Frontend Engineering</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works & Activities Section -->
+    <section id="works" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Laboratory & Project Showcase</p>
+          <h2 class="section-title">Selected Coursework & Activities</h2>
+          <p class="section-lead">
+            Curated laboratory outputs demonstrating progression across Midterm and Finals requirements, from core layout design to dynamic scripting.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-bar" role="tablist" aria-label="Filter works by term">
+          <button class="filter-btn active" data-filter="all">All Works</button>
+          <button class="filter-btn" data-filter="finals">Finals Activities</button>
+          <button class="filter-btn" data-filter="midterms">Midterms Activities</button>
+          <button class="filter-btn" data-filter="personal">Personal Projects</button>
+        </div>
+
+        <!-- Works Grid -->
+        <div class="works-grid">
+          <!-- Item 1: Finals Act 1 -->
+          <article class="work-card" data-category="finals">
+            <div>
+              <span class="work-category-badge">Finals Act 1</span>
+              <h3 class="work-title">Personal Portfolio System</h3>
+              <p class="work-summary">
+                Initial portfolio website build featuring multi-section architecture, profile cards, custom styling, and semantic page flow.
+              </p>
+              <div class="work-tags">
+                <span class="work-tag">HTML5</span>
+                <span class="work-tag">CSS3</span>
+                <span class="work-tag">Layout Design</span>
+              </div>
+            </div>
+            <div class="work-links">
+              <a href="Lab Activities/Finals/MAULA_ACT1/Maula_Finals_Act1/Maula_Portfolio/index.html" class="work-link" target="_blank" rel="noopener">Open Activity &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 2: Finals Act 2 -->
+          <article class="work-card" data-category="finals">
+            <div>
+              <span class="work-category-badge">Finals Act 2</span>
+              <h3 class="work-title">Interactive Form Engine</h3>
+              <p class="work-summary">
+                Form interface designed with input validation routines, responsive input controls, and DOM event handling.
+              </p>
+              <div class="work-tags">
+                <span class="work-tag">HTML5</span>
+                <span class="work-tag">JavaScript</span>
+                <span class="work-tag">Validation</span>
+              </div>
+            </div>
+            <div class="work-links">
+              <a href="Lab Activities/Finals/MAULA_ACT2/MaulaFinalsAct2/index.html" class="work-link" target="_blank" rel="noopener">Open Activity &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 3: Finals Act 3 -->
+          <article class="work-card" data-category="finals">
+            <div>
+              <span class="work-category-badge">Finals Act 3</span>
+              <h3 class="work-title">Dynamic Data Computation</h3>
+              <p class="work-summary">
+                JavaScript data calculation module focusing on program state, dynamic DOM updates, and structured output formatting.
+              </p>
+              <div class="work-tags">
+                <span class="work-tag">JavaScript</span>
+                <span class="work-tag">DOM Manipulation</span>
+                <span class="work-tag">CSS</span>
+              </div>
+            </div>
+            <div class="work-links">
+              <a href="Lab Activities/Finals/MAULA_ACT3/MaulaFinalsAct3/index.html" class="work-link" target="_blank" rel="noopener">Open Activity &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 4: Finals Act 4 -->
+          <article class="work-card" data-category="finals">
+            <div>
+              <span class="work-category-badge">Finals Act 4</span>
+              <h3 class="work-title">Web Application Workflow</h3>
+              <p class="work-summary">
+                Integrated application connecting user interactions, structured UI components, and client-side processing logic.
+              </p>
+              <div class="work-tags">
+                <span class="work-tag">JavaScript ES6</span>
+                <span class="work-tag">UI Architecture</span>
+                <span class="work-tag">HTML5</span>
+              </div>
+            </div>
+            <div class="work-links">
+              <a href="Lab Activities/Finals/MAULA_ACT4/MaulaFinalsAct4/index.html" class="work-link" target="_blank" rel="noopener">Open Activity &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 5: Midterm Act 3 & 4 -->
+          <article class="work-card" data-category="midterms">
+            <div>
+              <span class="work-category-badge">Midterms Act 3 & 4</span>
+              <h3 class="work-title">Registration & Grade Table System</h3>
+              <p class="work-summary">
+                Tabular grading summary and student registration interfaces demonstrating data table formatting, form fields, and linked navigation.
+              </p>
+              <div class="work-tags">
+                <span class="work-tag">HTML Tables</span>
+                <span class="work-tag">CSS Styling</span>
+                <span class="work-tag">Forms</span>
+              </div>
+            </div>
+            <div class="work-links">
+              <a href="Lab Activities/Midterm/Maula_Act3/GradeTable.html" class="work-link" target="_blank" rel="noopener">View Grade Table &rarr;</a>
+              <a href="Lab Activities/Midterm/Maula_Act3/RegistrationForm.html" class="work-link" target="_blank" rel="noopener">View Form &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 6: Midterm Act 5 -->
+          <article class="work-card" data-category="midterms">
+            <div>
+              <span class="work-category-badge">Midterms Act 5</span>
+              <h3 class="work-title">Media & Showcase Gallery</h3>
+              <p class="work-summary">
+                Responsive media gallery layout demonstrating grid composition, image asset handling, and structured content cards.
+              </p>
+              <div class="work-tags">
+                <span class="work-tag">CSS Grid</span>
+                <span class="work-tag">Responsive Media</span>
+                <span class="work-tag">UI Layout</span>
+              </div>
+            </div>
+            <div class="work-links">
+              <a href="Lab Activities/Midterm/Maula_Act5/index.html" class="work-link" target="_blank" rel="noopener">Open Gallery &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Item 7: Personal Project -->
+          <article class="work-card" data-category="personal">
+            <div>
+              <span class="work-category-badge">Personal Project</span>
+              <h3 class="work-title">Minimalist Portfolio Template</h3>
+              <p class="work-summary">
+                Lightweight, accessible web template crafted with a custom plum/lavender color palette, clean typography, and zero framework overhead.
+              </p>
+              <div class="work-tags">
+                <span class="work-tag">Vanilla JS</span>
+                <span class="work-tag">CSS Variables</span>
+                <span class="work-tag">Responsive</span>
+              </div>
+            </div>
+            <div class="work-links">
+              <a href="#hero" class="work-link">Current Template &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Technical Competencies</p>
+          <h2 class="section-title">Core Toolkit & Knowledge</h2>
+          <p class="section-lead">
+            Grounded in core web technologies and standard development practices without relying on bloated dependencies.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-category-card">
+            <h3 class="skill-category-title">Core Web Development</h3>
+            <ul class="skill-pill-list">
+              <li class="skill-pill">HTML5 (Semantic & Accessible)</li>
+              <li class="skill-pill">CSS3 (Flexbox & Grid)</li>
+              <li class="skill-pill">JavaScript (ES6+)</li>
+              <li class="skill-pill">DOM Manipulation & Events</li>
+              <li class="skill-pill">Responsive Design</li>
+            </ul>
+          </div>
+
+          <div class="skill-category-card">
+            <h3 class="skill-category-title">Database & Systems</h3>
+            <ul class="skill-pill-list">
+              <li class="skill-pill">SQL Fundamentals</li>
+              <li class="skill-pill">Relational Database Design</li>
+              <li class="skill-pill">Data Modeling</li>
+              <li class="skill-pill">CRUD Operations</li>
+            </ul>
+          </div>
+
+          <div class="skill-category-card">
+            <h3 class="skill-category-title">Tools & Development Workflow</h3>
+            <ul class="skill-pill-list">
+              <li class="skill-pill">Git & Version Control</li>
+              <li class="skill-pill">GitHub</li>
+              <li class="skill-pill">VS Code</li>
+              <li class="skill-pill">Chrome DevTools</li>
+              <li class="skill-pill">Command Line</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Education Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Background & Education</p>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <p>
+              Hello! I am <strong>John Lawrence F. Maula</strong>, currently a 3rd-year Bachelor of Science in Information Technology student at <strong>Pamantasan ng Lungsod ng Marikina (PDM)</strong>.
+            </p>
+            <p>
+              My focus is on front-end web development, clean coding practices, and building functional user interfaces that are fast, intuitive, and accessible. Throughout my academic journey, I have completed practical laboratory activities spanning basic markup, structured data tables, interactive forms, and dynamic script-driven pages.
+            </p>
+            <p>
+              I believe in learning the core fundamentals first—HTML, CSS, and JavaScript—to build strong technical foundations before reaching for complex frameworks.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-period">2023 &ndash; Present</span>
+              <h3 class="timeline-title">BS Information Technology (3rd Year)</h3>
+              <p class="timeline-subtitle">Pamantasan ng Lungsod ng Marikina (PDM)</p>
+              <p class="timeline-detail">Key Coursework: Web Systems and Technologies, Database Management, Data Structures & Algorithms, Object-Oriented Programming.</p>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-period">Academic Progression</span>
+              <h3 class="timeline-title">Laboratory Activities & Practical Projects</h3>
+              <p class="timeline-subtitle">Midterms & Finals Milestones</p>
+              <p class="timeline-detail">Designed and implemented multiple hands-on exercises in responsive layout design, form validation, and DOM manipulation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Get In Touch</p>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-lead">
+            Feel free to reach out for collaborations, academic inquiries, or internship opportunities.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.95rem;">
+              You can reach me directly via email or check out my repository code on GitHub.
+            </p>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <span class="contact-info-label">Email</span>
+                <a href="mailto:jlm.maula@example.com" class="contact-info-value">jlm.maula@example.com</a>
+              </div>
+              <div class="contact-info-item">
+                <span class="contact-info-label">Location</span>
+                <span class="contact-info-value">Marikina City, Philippines</span>
+              </div>
+              <div class="contact-info-item">
+                <span class="contact-info-label">GitHub</span>
+                <a href="https://github.com" target="_blank" rel="noopener" class="contact-info-value">github.com/your-username</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Jane Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-control" rows="4" placeholder="How can I help you?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+              <div id="form-status" class="form-status" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-wrapper">
+      <p>&copy; <span id="current-year">2026</span> John Lawrence F. Maula. All rights reserved.</p>
+
+      <div class="footer-links">
+        <a href="#hero">Top &uarr;</a>
+        <a href="#works">Works</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/js/main.js"></script>
+</body>
+</html>

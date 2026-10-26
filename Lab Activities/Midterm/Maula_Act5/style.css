@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(110, 108, 108);
+
+    transition: .5s ease;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{   
+    background-color: rgb(223, 223, 223);
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30%;
+    height: 80px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: white;
+
+    border-bottom: 2px solid rgb(110, 108, 108);
+}
+
+header img{
+    height: 30px;
+}
+
+header nav ul{
+    display: flex;
+
+    gap: 100px;
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 25px;
+    transition: .5s ease;
+}
+
+header nav ul li a:hover{
+    background-color: rgb(28, 97, 177);
+    padding: 15px;
+    color: white;
+}
+
+.Home{
+    display: flex;
+    align-items: flex-start;
+
+    padding: 50px;
+    height: 800px;
+
+    scroll-margin-top: 100px;
+}
+
+.Home main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 20px;
+    border-right: 2px solid rgb(110, 108, 108);
+    height: 600px;
+    width: 60%;
+}
+
+.Home main h1{
+    font-size: 4.5rem;
+    margin-bottom: 5%;
+}
+
+.Home main p{
+    font-size: 1rem;
+    margin-bottom: 5%;
+}
+
+.Home main button{
+    width: 400px;
+    height: 60px;
+
+    font-size: 1.5rem;
+
+    color: white;
+    background-color: rgb(28, 97, 177);
+    border: 2px solid rgb(28, 97, 177);
+    border-radius: 50px 5px 50px 5px;
+
+    transition: .5s ease;
+}
+
+.Home main button:hover{
+    color: rgb(28, 97, 177);
+    background-color: white;
+}
+
+.Home aside{
+    position: relative;
+    width: 40%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Home aside p{
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+    font-size: .9rem;
+
+    width: 30%;
+}
+
+.Home aside p span{
+    color: rgb(5, 82, 248);
+    font-weight: bold;
+}
+
+.Home aside img{
+    width: 500px;
+}
+
+.Home aside img:hover{
+    transform: scale(1.2);
+}
+
+
+
+.Gallery{
+    height: auto;  
+    padding: 50px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background-color: rgb(28, 97, 177);
+
+    scroll-margin-top: 60px;
+}
+
+.Gallery h1{
+    font-size: 3rem;
+    color: white;
+}
+
+.Gallery p{
+    color: white;
+    margin-bottom: 50px;
+}
+
+.Gallery .Q{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+
+    color: white;
+    font-style: italic;
+}
+
+.Gallery .cards{
+    display: grid;
+    gap: 50px;
+    justify-content: center;
+    grid-template-columns: repeat(4, auto);
+}
+
+.Gallery .card{
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.Gallery .card:hover{
+    background-color:white;
+}
+
+.Gallery .card:hover h2{
+    color: rgb(28, 97, 177);
+}
+
+.Gallery .card:hover p{
+    color: rgb(28, 97, 177);
+}
+
+.Gallery .card:hover img{
+    transform: scale(1.1);
+}
+
+.Gallery .card img{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 25px;
+    
+}
+
+.Gallery .card h2{
+    color: white;
+}
+.Gallery .card p{
+    color: white;
+}
+
+
+
+.Kits{
+    height: auto;
+    padding: 50px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    scroll-margin-top: 60px;
+}
+
+.Kits .title{
+    text-align: center;
+    color: rgb(110, 108, 108);  
+    background-color: rgb(223, 223, 223);
+}
+
+.Kits h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    background-color: rgb(202, 202, 202);
+}
+
+.Kits ul{
+    list-style: none;
+}
+
+.Kits ul li{
+    margin: 25px;
+    padding: 20px;
+    background-color: rgb(202, 202, 202);
+}
+
+.Kits img{
+    position: absolute;
+    top: 25px;
+    left: 70px;
+    width: 600px;
+}
+
+.Contact{
+    background-color: rgb(28, 97, 177);
+    height: auto;
+    padding: 50px;
+    
+    scroll-margin-top: 60px;
+}
+
+.Contact h1{
+    font-size: 3rem;
+    color: rgb(223, 223, 223);
+    margin-bottom: 50px;
+}
+
+.Contact h3{
+    color: rgb(223, 223, 223);
+}
+
+.Contact h3 span{
+    color: rgb(223, 223, 223);
+    font-style: italic;
+    font-weight: 100;
+}
+
+footer{
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid rgb(110, 108, 108);
+}

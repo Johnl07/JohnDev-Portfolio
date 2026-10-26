@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 50px;
+        }
+
+        .card{
+            background-color: rgb(238, 238, 238);
+            padding: 40px;
+            border-radius: 25px;
+        }
+
+        .innerCard{
+            text-align: left;
+            margin: 30px;
+            padding: 40px;
+            background-color: rgb(255, 255, 255);
+
+            border-radius: 20px;
+        }
+
+        button{
+            padding: 15px;
+            border: 3px solid rgb(59, 59, 59);
+            border-radius: 10px;
+
+            background-color: rgb(59, 59, 59);
+            color: white;
+        }
+
+        .select{
+            margin: 30px;
+        }
+        select{
+            width: 100%;
+            padding: 20px;
+
+            border-radius: 10px;
+        }
+
+        .bottomCard{
+            margin: 30px;
+            padding: 40px;
+
+            border-radius: 20px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        table{
+            text-align: center;
+            border: 2px solid rgb(145, 145, 145);
+            border-spacing: 0;
+        }
+
+        th, td{
+            border: 2px solid rgb(145, 145, 145);
+            padding: 15px 80px;
+        }
+
+        th{
+            background-color: rgb(145, 145, 145);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="card">
+
+        <h1 id="title">My Student Profile</h1><br>
+        <p><b>Welcome to my interactive porfile!</b></p>
+
+        <div class="innerCard">
+            <h2>Student Information</h2><br>
+            <p>Name: <b>John Lawrence F. Maula</b></p><br>
+            <p>Course: <b id="course1">BSIT</b></p><br>
+            <p>Year Level: <b>3rd Year</b></p><br>
+        </div>
+
+        <button id="btn1">Change Title</button>
+        <button id="btn2">Hide Profile</button>
+        <button id="btn3">Show Profile</button>
+
+        <div class="bottomCard">
+            <p id="status1">status update</p>
+        </div>
+
+        <h1>Choose your Course</h1>
+
+        <br>
+
+        <div class="select">
+            <select name="" id="course">
+                <option value="Select Course" disabled selected>Select Course</option>
+                <option value="BSIT">BSIT</option>
+                <option value="BSCS">BSCS</option>
+                <option value="BTLED">BTLEd</option>
+                <option value="BSTM">BSTM</option>
+            </select>
+        </div>
+
+        <div class="bottomCard" id="status2">
+            <p>No course selected</p>
+        </div>
+
+        <p>Registered Students:</p>
+
+        <center>
+            <table id="table">
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Year Level</th>
+                </tr>
+    
+                <tr>
+                    <td>1</td>
+                    <td>juan dela cruz</td>
+                    <td>BSIT</td>
+                    <td>1st year</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>two dela cruz</td>
+                    <td>BSCS</td>
+                    <td>2nd year</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>three dela cruz</td>
+                    <td>BSTM</td>
+                    <td>3rd year</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>four dela cruz</td>
+                    <td>BTLEd</td>
+                    <td>4th year</td>
+                </tr>
+            </table>    
+        </center>
+
+        <br><br>
+
+        <button id="btn4">Apply Odd Rows</button>
+        <button id="btn5">Apply Even Rows</button>
+        <button id="btn6">Hide Table</button>
+        <button id="btn7">Show Table</button>
+
+        <div class="bottomCard">
+            <p id="status3">No Rows Highlighted</p>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

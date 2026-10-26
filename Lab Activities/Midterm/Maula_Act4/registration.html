@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>My Personal Website</h1>
+        <p>Welcome to my Personal Sdtudent Portal</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="grades.html">Grades</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <section class="regSection">
+        <form action="">
+            <h1>Student Registration Form</h1>
+
+            <label for="SName">Student Name:</label>
+            <input class="textbox" type="text" name="SName" id="SName" placeholder="Enter Name">
+            <br>
+            <label for="email">Email:</label>
+            <input class="textbox" type="email" id="email" name="email" placeholder="Enter Email">
+            <br>
+            <label for="password">Password:</label>
+            <input class="textbox" type="password" id="password" name="password" placeholder="Enter Password">
+            <br>    
+
+            <label for="gender">Gender:</label>
+            <div class="gender">
+                <input type="radio" name="gender" id="male">Male
+                <input type="radio" name="gender" id="female">Female
+            </div>
+            <br>    
+            
+            <label for="course">Course:</label>
+            <select name="course" id="course">
+                <option value="BSIT">BSIT</option>
+                <option value="BSCS">BSCS</option>
+                <option value="BSOA">BSOA</option>
+                <option value="BTLED">BTLED</option>
+            </select>
+            <br>    
+
+            <label for="skills">Skills:</label>
+            <div class="skills">
+                <input type="checkbox" name="HTML" id="HTML">HTML
+                <input type="checkbox" name="CSS" id="CSS">CSS
+                <input type="checkbox" name="JavaScript" id="JavaScript">JavaScript
+            </div>
+            <br>
+
+            <label for="Profile">Profile Picture:</label>
+            <input type="file" name="" id="">
+            <br>
+
+            <label for="Textarea">Address:</label>
+            <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+            <br>    
+
+            <input class="submit" type="button" value="Submit">
+            <br>
+            <input class="reset" type="button" value="Reset">
+
+        </form>
+    </section>
+
+    <footer>
+        Credits: 2026 My Personal Website
+    </footer>
+
+</body>
+</html>
