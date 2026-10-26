@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 // Page Not Found — John Dev Portfolio</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <style>
+    .not-found-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+    .not-found-code {
+      font-size: clamp(4rem, 15vw, 8rem);
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      line-height: 1;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1rem;
+    }
+    .not-found-badge {
+      font-family: var(--font-mono, monospace);
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      color: var(--secondary);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .not-found-desc {
+      font-size: 1.1rem;
+      max-width: 480px;
+      margin-bottom: 2rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="not-found-container">
+    <div class="not-found-badge">[ SYSTEM STATUS // 404 ]</div>
+    <h1 class="not-found-code">404</h1>
+    <p class="not-found-desc">The requested route or specification could not be located on this server.</p>
+    <a href="/" class="mecha-cut-btn" style="text-decoration: none;">
+      <span class="btn-corner-cut"></span>
+      <span class="btn-text">Return to Portfolio &rarr;</span>
+    </a>
+  </div>
+</body>
+</html>
